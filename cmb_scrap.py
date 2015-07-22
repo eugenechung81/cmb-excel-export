@@ -72,7 +72,6 @@ def get_csv_row(link, headers):
 
 # Start
 headers = ['Id', 'Name', 'Age', 'Height', 'Current City', 'Description', 'Employer', 'Religion', 'Home Country', 'Nationality', 'Education', 'Ethnicity', 'Occupation', 'Url', 'Image-1', 'Image-2', 'Image-3', 'Image-4']
-# headers = ['Id', 'Name', 'Age', 'Height', 'Occupation', 'Url', 'Image-1', 'Image-2', 'Image-3', 'Image-4']
 go("https://coffeemeetsbagel.com/bagels/history/")
 links = get_all_links()
 
@@ -82,15 +81,10 @@ len(links)
 print links
 
 # https://coffeemeetsbagel.com/bagels/history/?page=2
-# https://coffeemeetsbagel.com/bagels/history/?page=3
-# https://coffeemeetsbagel.com/bagels/history/?page=4
-
-# https://coffeemeetsbagel.com/bagels/matched/6049617
 # https://coffeemeetsbagel.com/bagels/matched/6092846
 
 rows = []
 for link in links:
-# for link in links[:10]:
     try:
         download_profiles_pics(link)
         sleep(1)
@@ -101,7 +95,6 @@ for link in links:
     except:
         print 'Error in ' + link
 
-
 # OUTPUT
 
 f = open("bagels-all.csv", 'w')
@@ -110,8 +103,6 @@ writer.writerow(headers)
 for r in rows:
     writer.writerow(r)
 f.close()
-
-
 
 # Test Individual
 get_csv_row('https://coffeemeetsbagel.com/bagels/matched/5788628',headers)

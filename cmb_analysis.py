@@ -9,13 +9,10 @@ df.columns
 df.dtypes
 df.describe()
 
-
 pd.set_option('display.height', 1000)
 pd.set_option('display.max_rows', 500)
 pd.set_option('display.max_columns', 500)
 pd.set_option('display.width', 1000)
-###
-
 
 df[['Age_Num','CountI']]
 
@@ -44,28 +41,20 @@ df['Height_N'] = pd.Series(n_heights)
 
 ###
 
-
 plt.figure()
 df['Age_Num'].describe()
 df['Age_Num'].mean()
 df['Age_Num'].diff().hist()
 # df['Age_Num'].plot(kind='bar')
 df['Age_Num'].hist()
-# df.Age_Num.hist()
 
 df['Height_N'].describe()
 df['Height_N'].diff().hist()
 
 df.groupby('Age_Num').CountI.sum()
-
 df.groupby('Nationality').CountI.sum().plot(kind='bar')
 df.groupby('Religion').CountI.sum().plot(kind='bar')
 df.groupby('Religion').CountI.sum().plot(kind='pie')
-
-
-# df.groupby('Age_Num').agg([np.sum])
-
-# pd.Series.plot(df['Age_Num'],kind='bar')
 
 ### Report
 
@@ -77,7 +66,6 @@ plt.figure()
 df['Age_Num'].diff().hist()
 plt.show()
 
-
 df.groupby('Nationality').CountI.sum().plot(kind='bar');
 plt.tight_layout()
 plt.show();
@@ -87,13 +75,10 @@ plt.tight_layout()
 plt.show();
 
 df.groupby('Religion').CountI.sum().plot(kind='pie'); plt.show();
-
-
 plt.figure()
-# df.groupby('Age_Num').CountI.sum().plot(kind='bar')
+
 df.groupby('Height').CountI.sum().plot(kind='bar')
 plt.show()
-
 
 df['Height_N'].describe()
 df['Height_N'].diff().hist()
