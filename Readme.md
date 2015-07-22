@@ -1,4 +1,4 @@
-Coffee Meets Bagel dating website match exporter.  Provides an csv file dump of of user data along with image links.  Uses selenium to scrap web, vb script to size and laod images, and pandas/matlablib to provide analysis.  
+Coffee Meets Bagel dating website match exporter.  Provides an csv file dump of of user data along with image links.  Uses selenium to scrap web, vb script to size and load images, and pandas/matlablib to provide analysis.  
 
 ## Sample 
 
